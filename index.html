@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Список дел</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="jquery-3.5.0.min.js"></script>
+	<script src="scriptI.js"></script>
+</head>
+<body>
+	<div class="central-container">
+		<div class="left">
+			<div class="headerLeft">Список дел:</div> 
+			<div class="list-zero">Список пуст...</div>
+		</div>
+		<div class="right">
+			<div class="headerRight">Добавить новое дело:</div>
+			<form class="forma-block" id="forma">
+				<div class="name-newdelo">
+					<div class="newdelo-text">* Название</div> 
+					<input class="nameText" type="text" name="nazvanie">
+				</div>
+				<div class="descr-newdelo">
+					<div class="newdelo-text">* Описание</div> 
+					<textarea type="text" name="opisanie"></textarea>
+				</div>
+				<button id="button-add" onclick="return false">Добавить дело</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html> 
