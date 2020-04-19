@@ -16,10 +16,9 @@ $(document).ready(function(){
 			$('.left').append(`
 
 				<div class="addedCase"> 
-					<div class="top">
-						<div class="zagolovokCase">${nameCase}</div>
-						<button class="krestik"></button>
-					</div>
+					<div class="zagolovokCase">${nameCase}</div>
+					<button class="krestik"></button>
+					<button class="strelochka"></button>
 					<div class="addedCaseLine"></div>
 					<div class="descriptionCase">${descCase}</div>
 				</div>
@@ -31,7 +30,7 @@ $(document).ready(function(){
 		}	else {
 			$('input').addClass('error');
 			$('textarea').addClass('error');
-		}
+			}
 	}	
 
 	$('#button-add').on('click', addCase);
