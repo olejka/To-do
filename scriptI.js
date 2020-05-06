@@ -1,23 +1,5 @@
 $(document).ready(function(){	
 
-	// function initialState() {
-	// 	if (localStorage.getItem('comments') == null) {
-	// 		$('.list-zero').show();
-	// 	} else {
-	// 		$('.list-zero').hide();
-	// 		$('.left').html(localStorage.getItem('.comments'));
-	// 	}
-	// }
-
-	// initialState();
-
-	// function addToStorage() {
-	// 	let content = $('.left').html();
-	// 	console.log(content)
-
-	// 	localStorage.setItem('comments', content);
-	// }
-
 	function addCase() {
 
 		let nameCase = $('input').val(),
@@ -33,18 +15,20 @@ $(document).ready(function(){
 			$('.list-zero').hide();
 			$('.left').append(`
 				<div class="addedCase"> 
-					<div class="zagolovokCase">${nameCase}</div>
-					<button class="krestik"></button>
-					<button class="strelochka"></button>
-					<div class="addedCaseLine"></div>
-					<div class="descriptionCase">${descCase}</div>
+					<div class=addedCase-top>
+						<div class="zagolovokCase">${nameCase}</div>
+						<button class="krestik"></button>
+						<button class="strelochka"></button>
+						<div class="addedCaseLine"></div>
+					</div>
+					<div class=addedCase-bottom>
+						<div class="descriptionCase">${descCase}</div>
+					</div>
 				</div>
 			`);
 
 			nameCase = $('input').val('');
 			descCase = $('textarea').val('');
-
-			// addToStorage();
 			
 		}	else {
 			$('input').addClass('error');
@@ -57,17 +41,13 @@ $(document).ready(function(){
 
 		let items = $('.addedCase');
 
-		// addToStorage();
-
 		if (items.length == 0) {
 			$('.list-zero').show();
-		// 	localStorage.remove('comments')
 		}
-
 	}
 
 	function hideDescr(item) {
-		item.hide();
+		item.slideToggle();
 	}
 
 	$('#button-add').on('click', addCase);
@@ -78,16 +58,23 @@ $(document).ready(function(){
 		let item = $(this).parents('.addedCase');
 
 		removeCase(item);
+
 	});
 
 	$('body').on('click', '.strelochka', function(event){
 		event.preventDefault();
-		console.log(event);
 
-		let item = $(this).parents('.descriptionCase');
+
+
+		let item = $(this).parents('.addedCase').find('.addedCase-bottom');
 
 		hideDescr(item);
+
+		let transform = $(this);
+		transform.toggleClass('rotate');
+
 	});
+
 });
 
 
