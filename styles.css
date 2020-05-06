@@ -106,11 +106,24 @@ html, body {
   background-color: red;
 }
 
-.addedCase {
+/* .addedCase {
   height: 136px;
   width: 470px;
   background-color: #ffffff;
   margin-top: 20px;
+} */
+
+.addedCase-top {
+  height: 50px;
+  width: 470px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.addedCase-bottom {
+  height: 85px;
+  width: 470px;
+  background-color: #ffffff;
 }
 
 .addedCaseLine {
@@ -150,7 +163,7 @@ html, body {
   height: 9px;
   width: 9px;
   border: none;
-  /* outline: none; */
+  outline: none;
 }
 
 .strelochka {
@@ -162,7 +175,7 @@ html, body {
   height: 5px;
   width: 6px;
   border: none;
-  /* outline: none; */
+  outline: none;
   float: right;
 }
 
@@ -170,5 +183,8 @@ html, body {
   border: 1px solid red !important;
 }
 
+.rotate {
+  transform: rotate(90deg);  
+}
 
 
