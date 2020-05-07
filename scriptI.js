@@ -1,3 +1,5 @@
+$("html,body").css("overflow","hidden");
+
 $(document).ready(function(){	
 
 	function addCase() {
